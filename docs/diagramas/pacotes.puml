@@ -1,0 +1,36 @@
+@startuml pacotes
+title Sistema de Aluguel de Carros - Diagrama de Pacotes (Visão Lógica)
+skinparam packageStyle rectangle
+
+package "Front-end (React + Vite) - View" as FE {
+  package "pages" as FE_P
+  package "components" as FE_C
+  package "api / AuthContext" as FE_A
+}
+
+package "Back-end (Spring Boot) - com.pucminas.aluguel" as BE {
+  package "controller\n(C - Controller)" as CT
+  package "service\n(regras de negócio)" as SV
+  package "model\n(M - Model)" as MD
+  package "repository" as RP
+  package "dto" as DT
+  package "security / config" as SC
+  package "exception" as EX
+}
+
+database "Supabase\n(PostgreSQL)" as DB
+
+FE_P ..> FE_C
+FE_P ..> FE_A
+FE_A ..> CT : HTTP/JSON + JWT
+CT ..> SV
+CT ..> DT
+SV ..> RP
+SV ..> MD
+SV ..> DT
+SV ..> EX
+RP ..> MD
+SC ..> RP
+CT ..> SC : autorização
+RP ..> DB : JPA / JDBC
+@enduml

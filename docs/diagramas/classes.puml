@@ -1,0 +1,82 @@
+@startuml classes
+title Sistema de Aluguel de Carros - Diagrama de Classes (domínio)
+skinparam classAttributeIconSize 0
+
+enum Perfil { CLIENTE\nAGENTE }
+enum TipoAgente { EMPRESA\nBANCO }
+enum TipoProprietario { CLIENTE\nEMPRESA\nBANCO }
+enum StatusPedido { PENDENTE\nAPROVADO\nREPROVADO\nCONTRATADO\nCANCELADO }
+
+class Usuario {
+  - id: Long
+  - login: String
+  - senhaHash: String
+  - perfil: Perfil
+}
+
+class Cliente {
+  - id: Long
+  - rg: String
+  - cpf: String
+  - nome: String
+  - endereco: String
+  - profissao: String
+}
+
+class Rendimento {
+  - id: Long
+  - entidadeEmpregadora: String
+  - valor: BigDecimal
+}
+
+class Agente {
+  - id: Long
+  - nome: String
+  - cnpj: String
+  - tipo: TipoAgente
+}
+
+class Automovel {
+  - id: Long
+  - matricula: String
+  - ano: Integer
+  - marca: String
+  - modelo: String
+  - placa: String
+  - tipoProprietario: TipoProprietario
+  - proprietarioId: Long
+}
+
+class Pedido {
+  - id: Long
+  - dataInicio: LocalDate
+  - dataFim: LocalDate
+  - valorTotal: BigDecimal
+  - status: StatusPedido
+  - parecerFinanceiro: String
+  - dataCriacao: LocalDateTime
+}
+
+class ContratoCredito {
+  - id: Long
+  - valorFinanciado: BigDecimal
+  - taxaJurosMensal: BigDecimal
+  - parcelas: Integer
+}
+
+Usuario "1" -- "0..1" Cliente : autentica >
+Usuario "1" -- "0..1" Agente : autentica >
+Cliente "1" *-- "0..3" Rendimento
+Cliente "1" -- "0..*" Pedido : solicita >
+Automovel "1" -- "0..*" Pedido : é alugado em >
+Agente "0..1" -- "0..*" Pedido : avalia >
+Pedido "1" o-- "0..1" ContratoCredito
+Agente "1" -- "0..*" ContratoCredito : banco concedente >
+Automovel ..> Cliente : proprietário\n(se CLIENTE)
+Automovel ..> Agente : proprietário\n(se EMPRESA ou BANCO)
+
+Usuario --> Perfil
+Agente --> TipoAgente
+Automovel --> TipoProprietario
+Pedido --> StatusPedido
+@enduml
