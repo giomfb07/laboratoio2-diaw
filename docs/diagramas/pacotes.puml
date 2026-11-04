@@ -1,4 +1,6 @@
 @startuml pacotes
+skinparam monochrome true
+skinparam shadowing false
 title Sistema de Aluguel de Carros - Diagrama de Pacotes (Visão Lógica)
 skinparam packageStyle rectangle
 

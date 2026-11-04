@@ -1,4 +1,6 @@
 @startuml classes
+skinparam monochrome true
+skinparam shadowing false
 title Sistema de Aluguel de Carros - Diagrama de Classes (domínio)
 skinparam classAttributeIconSize 0
 
