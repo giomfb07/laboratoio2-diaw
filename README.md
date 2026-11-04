@@ -7,20 +7,6 @@
 > [!NOTE]
 > Plataforma web para **gestão de pedidos de aluguel de automóveis**: o cliente solicita e acompanha o aluguel, enquanto empresas e bancos analisam, contratam e financiam.
 
-<table>
-  <tr>
-    <td width="800px">
-      <div align="justify">
-        Este <b>README.md</b> apresenta um template organizado, ideal para servir como referência acadêmica e profissional em projetos de desenvolvimento, desde trabalhos da faculdade até projetos desenvolvidos para etapas técnicas de processos seletivos. Ele reúne as <i>seções essenciais</i> recomendadas pelo <a href="https://github.com/joaopauloaramuni">Prof. Dr. João Paulo Aramuni</a>, permitindo <i>organização clara</i>, <i>documentação eficiente</i> e <i>padronização</i> entre diferentes trabalhos. O objetivo deste esqueleto é <b>facilitar a construção de projetos bem documentados</b>, oferecendo um <i>guia completo</i> que inclui <b>boas práticas</b>, instruções de execução, tecnologias utilizadas, arquitetura, estruturas de pastas, testes, links úteis e orientações para colaboração. Esse template ajuda estudantes a desenvolverem <b>documentação de qualidade profissional</b> desde os primeiros períodos, promovendo <i>clareza</i>, <i>reprodutibilidade</i> e <i>padronização</i> nos projetos.
-      </div>
-    </td>
-    <td>
-      <div>
-        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo do Projeto" width="120px"/>
-      </div>
-    </td>
-  </tr> 
-</table>
 
 ## 🚧 Status do Projeto
  
@@ -340,8 +326,6 @@ serve -s frontend/dist
  
 Telas principais da aplicação.
  
-> [!WARNING]
-> Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
  
 ### 🌐 Aplicação Web
  
@@ -350,11 +334,11 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 | Tela | Captura de Tela |
 | :---: | :---: |
 | **Página de Login** | **Cadastro de Cliente** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Cliente" width="120px" height="120px"> |
+| <img src="./docs/img/login.jpg" alt="Tela de Login" width="120px" height="120px"> | <img src="./docs/img/criar_cliente.jpg" alt="Tela de Cadastro de Cliente" width="120px" height="120px"> |
 | **Lista de Pedidos (status)** | **Novo Pedido de Aluguel** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Pedidos" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Novo Pedido" width="120px" height="120px"> |
+| <img src="./docs/img/lista_pedidos.jpg" alt="Tela de Pedidos" width="120px" height="120px"> | <img src="./docs/img/novo_pedido.jpg" alt="Tela de Novo Pedido" width="120px" height="120px"> |
 | **Automóveis** | **Análise do Agente** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Automóveis" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Análise do Agente" width="120px" height="120px"> |
+| <img src="./docs/img/automoveis.jpg" alt="Tela de Automóveis" width="120px" height="120px"> | <img src="./docs/img/detalhes_agente.jpg" alt="Tela de Análise do Agente" width="120px" height="120px"> |
  
 > 📸 *Substitua as imagens acima por capturas reais da aplicação em execução.*
  
